@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "Droid Sans", arial, verdana, sans-serif;
+    font-weight: 700;
+    color: #ff6;
+    background-color: #000;
+    overflow: hidden;
+}
+
+i {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animateStars linear infinite;
+}
+
+p.start {
+    position: relative;
+    width: 16em;
+    font-size: 200%;
+    font-weight: 400;
+    margin: 20% auto;
+    text-align: center;
+    color: #4ee;
+    opacity: 0;
+    z-index: 1;
+    animation: intro 2s ease-out;
+}
+
+.title {
+    position: absolute;
+    width: 2.6em;
+    left: 50%;
+    top: 25%;
+    font-size: 10em;
+    text-align: center;
+    margin-left: -1.3em;
+    line-height: 0.8em;
+    letter-spacing: -0.05em;
+    color: #000;
+    text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+    opacity: 0;
+    z-index: 1;
+    animation: logo 6s ease-out 2.5s;
+}
+
+.title sub {
+    display: block;
+    font-size: 0.3em;
+    letter-spacing: 0;
+    line-height: 0.8em;
+}
+
+.titles {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(280px) rotateX(27deg) translateY(200px);
+}
+
+.titles:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 20%;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.titles p {
+    text-align: justify;
+    margin: 0.8em 0;
+}
+
+.titles p.subtitle {
+    text-align: center;
+}
+
+.titlecontent {
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 3.7s infinite;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(1.4);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -150%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateStars {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
